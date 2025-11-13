@@ -4,89 +4,101 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Laundry Wallah / Laundry Mart</title>
-  <style>
-    body{font-family: Georgia, 'Times New Roman', Times, serif; margin:20px;}
-    .page{border:3px solid #000; padding:18px; min-height:85vh}
-    h1{font-size:32px; margin:0 0 8px}
-    .intro{font-size:14px; line-height:1.4; margin-bottom:18px}
-    .top-row{display:flex; gap:24px; align-items:flex-start}
-    .laundry-image{width:160px; height:auto}
-    .left-col{width:220px}
-    .services h2, .price h2, .book h2{font-size:20px; margin:18px 0 8px}
-    ul{margin:6px 0 0 18px}
-    table{border-collapse:collapse; margin-top:8px}
-    table, th, td{border:1px solid #000}
-    th, td{padding:6px 10px}
-    .book form{margin-top:8px}
-    .book label{font-size:14px}
-    .book input[type="text"], .book input[type="email"], .book input[type="tel"]{padding:4px; margin-right:8px}
-    .footer{margin-top:18px; font-size:14px}
-  </style>
+  
 </head>
 <body>
-  <div class="page">
+  <header>
     <h1>Welcome to Laundry Wallah / Laundry Mart</h1>
-    <p class="intro">
-      Welcome to Laundry Wallah / Laundry Mart — your one-stop solution for all things clean and fresh. Our skilled team is dedicated to providing fast, reliable, and caring laundry services tailored to your needs. We use high-quality detergents and modern machines to ensure your garments come back spotless and well-treated. Whether it's everyday washing or special garment care, we handle each item as if it were our own. Customer satisfaction and convenience are at the heart of everything we do.
-    </p>
+    <p style="margin-top:8px;color:var(--muted);">Clean clothes. Happy life.</p>
+  </header>
 
-    <div class="top-row">
-      <div class="left-col">
-        <!-- image from a free source; replace URL if you'd like another picture -->
-        <img class="laundry-image" src="https://static.vecteezy.com/system/resources/previews/004/728/707/non_2x/landry-man-cartoon-composition-vector.jpg" alt="Laundry machine">
+  <main>
+    <!-- About Section -->
+    <section class="card about" id="about">
+      <h2>About Laundry Wallah / Laundry Mart</h2>
+      <p>
+        Laundry Wallah / Laundry Mart is a premier laundry service dedicated to making your life easier and your garments fresher. 
+        We combine professional cleaning techniques with eco-friendly detergents to ensure your clothes receive gentle, effective care. 
+        From everyday laundry to delicate and specialty garments, our trained staff handles each piece with attention and precision. 
+        We offer flexible pickup and delivery options, quick turnaround times, and transparent pricing so you always know what to expect. 
+        Customer satisfaction and fabric longevity are at the heart of everything we do — because clean clothes should be worry-free.
+      </p>
+    </section>
 
-        <div class="services">
-          <h2>Our Services</h2>
-          <ul>
-            <li>Washing and Drying</li>
-            <li>Ironing and Folding</li>
-            <li>Dry Cleaning</li>
-            <li>Stain Removal</li>
-            <li>Express Services</li>
-            <li>Special Garment Care</li>
-            <li>And more...</li>
-          </ul>
-        </div>
+    <!-- Image Section -->
+    <section class="card image-section" id="image">
+      <h2>Our Work</h2>
+      <!-- Image pulled from Unsplash (royalty-free). Replace URL if you prefer another image. -->
+      <img src="https://static.vecteezy.com/system/resources/previews/004/728/707/non_2x/landry-man-cartoon-composition-vector.jpg" alt="Laundry machines and clean clothes" 
+       height="200">
+    </section>
 
-        <div class="price">
-          <h2>Price List</h2>
-          <table>
-            <tr>
-              <th>Service</th>
-              <th>Price (Rs)</th>
-            </tr>
-            <tr>
-              <td>Washing and Drying</td>
-              <td>10.00</td>
-            </tr>
-            <tr>
-              <td>Ironing and Folding</td>
-              <td>5.00</td>
-            </tr>
-          </table>
-        </div>
+    <!-- Services Section -->
+    <section class="card" id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Washing and Drying</li>
+        <li>Ironing and Folding</li>
+        <li>Dry Cleaning</li>
+        <li>Stain Removal</li>
+        <li>Express Services</li>
+        <li>Special Garment Care (silk, wool, leather)</li>
+        <li>Pickup & Delivery</li>
+      </ul>
+    </section>
 
-      </div> <!-- left-col -->
+    <!-- Price List Section -->
+    <section class="card" id="prices">
+      <h2>Price List</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Price (INR)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Washing and Drying</td>
+            <td>Rs 10.00 (per kg)</td>
+          </tr>
+          <tr>
+            <td>Ironing and Folding</td>
+            <td>Rs 5.00 (per piece)</td>
+          </tr>
+          <tr>
+            <td>Dry Cleaning (Shirt)</td>
+            <td>Rs 40.00</td>
+          </tr>
+          <tr>
+            <td>Express Service (Same day)</td>
+            <td>Additional Rs 30.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-      <div style="flex:1">
-        <!-- empty area to match the wide layout in the expected screenshot -->
-      </div>
-    </div> <!-- top-row -->
-
-    <div class="book">
+    <!-- Book Now Section -->
+    <section class="card" id="book">
       <h2>Book Now</h2>
-      <form action="#" onsubmit="alert('Booking submitted (demo)'); return false;">
-        <label>Name: <input type="text" name="name" required></label>
-        <label>Email: <input type="email" name="email" required></label>
-        <label>Phone: <input type="tel" name="phone" required pattern="[0-9+\- ]{6,}"></label>
-        <input type="submit" value="Submit">
+      <form action="#" method="post" onsubmit="alert('Thank you! Your booking request has been received.'); return false;">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your full name" required aria-label="Full name">
+          <input type="email" name="email" placeholder="Email address" required aria-label="Email address">
+          <input type="tel" name="phone" placeholder="Phone number" required aria-label="Phone number">
+        </div>
+        <div style="margin-top:12px;">
+          <button type="submit">Submit</button>
+        </div>
       </form>
-    </div>
+    </section>
+  </main>
 
-    <div class="footer">
-      <p>Contact us at: <a href="mailto:info@laundrymart.com">info@laundrymart.com</a></p>
+  <footer>
+    <div class="card" style="max-width:1000px;margin:0 auto;">
+      <p style="margin:0;">Contact us at: info@laundrymart.com</p>
     </div>
+  </footer>
 
-  </div> <!-- page -->
 </body>
 </html>
